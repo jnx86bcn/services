@@ -1,0 +1,16 @@
+C:\WorkSpace\jgasparino\Services\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\Models.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\Models.pdb
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\DnsClient.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Bson.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Driver.Core.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Driver.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\System.Buffers.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\DnsClient.xml
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Bson.xml
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Driver.xml
+C:\WorkSpace\jgasparino\Services\Models\bin\Debug\MongoDB.Driver.Core.xml
+C:\WorkSpace\jgasparino\Services\Models\obj\Debug\Models.csproj.CopyComplete
+C:\WorkSpace\jgasparino\Services\Models\obj\Debug\Models.dll
+C:\WorkSpace\jgasparino\Services\Models\obj\Debug\Models.pdb

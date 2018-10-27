@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\WorkSpace\jgasparino\Services\zoo\obj\Debug\Package\PackageTmp" managedRuntimeVersion="v4.0" />
-  <setAcl path="C:\WorkSpace\jgasparino\Services\zoo\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\WorkSpace\jgasparino\Services\zoo\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\workspaces\services\zoo\obj\Debug\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\workspaces\services\zoo\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\workspaces\services\zoo\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

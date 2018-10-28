@@ -5,6 +5,7 @@ using System.ServiceModel.Activation;
 using System.Collections.Generic;
 using MongoDB.Driver;
 using Models;
+using Newtonsoft.Json;
 
 namespace zoo
 {
@@ -47,10 +48,10 @@ namespace zoo
 
         }
 
-        public void AddItem(string jsonModel)
+        public void AddItem(string json)
         {
 
-            Animal animal = JsonConvert.DeserializeObject<Animal>(jsonModel);
+            Animal animal = JsonConvert.DeserializeObject<Animal>(json);
 
             //Create client connection to our MongoDB database
             var client = new MongoClient(_connectionString);

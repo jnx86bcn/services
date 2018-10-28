@@ -12,8 +12,8 @@ namespace zoo
         [WebInvoke(Method = "GET", UriTemplate = "/GetAllItems", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<Animal> GetAllItems();
 
-        [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "/AddItem", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        void AddItem(Animal animal);
+        //[OperationContract]
+        //[WebInvoke(Method = "POST", UriTemplate = "/AddItem", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        //void AddItem(string jsonModel);
     }
 }

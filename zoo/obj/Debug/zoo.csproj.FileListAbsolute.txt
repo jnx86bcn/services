@@ -94,3 +94,6 @@ C:\workspaces\services\zoo\obj\Debug\zoo.csproj.CoreCompileInputs.cache
 C:\workspaces\services\zoo\obj\Debug\zoo.csproj.CopyComplete
 C:\workspaces\services\zoo\obj\Debug\zoo.dll
 C:\workspaces\services\zoo\obj\Debug\zoo.pdb
+C:\workspaces\services\zoo\bin\Newtonsoft.Json.dll
+C:\workspaces\services\zoo\bin\Newtonsoft.Json.xml
+C:\workspaces\services\zoo\bin\System.Buffers.xml

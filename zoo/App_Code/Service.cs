@@ -1,10 +1,10 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
+using System.Collections.Generic;
 using MongoDB.Driver;
 using Models;
-using System;
-using System.Collections.Generic;
 
 namespace zoo
 {
@@ -47,8 +47,10 @@ namespace zoo
 
         }
 
-        public void AddItem(Animal animal)
+        public void AddItem(string jsonModel)
         {
+
+            Animal animal = JsonConvert.DeserializeObject<Animal>(jsonModel);
 
             //Create client connection to our MongoDB database
             var client = new MongoClient(_connectionString);

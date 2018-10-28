@@ -26,7 +26,6 @@ C:\workspaces\services\Models\bin\Debug\DnsClient.xml
 C:\workspaces\services\Models\bin\Debug\MongoDB.Bson.xml
 C:\workspaces\services\Models\bin\Debug\MongoDB.Driver.xml
 C:\workspaces\services\Models\bin\Debug\MongoDB.Driver.Core.xml
-C:\workspaces\services\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\workspaces\services\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\workspaces\services\Models\obj\Debug\Models.csproj.CopyComplete
 C:\workspaces\services\Models\obj\Debug\Models.dll

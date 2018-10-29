@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("zoo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft Corporation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("zoo")]
-[assembly: AssemblyCopyright("Copyright © Microsoft Corporation 2018")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("42ca1c96-d454-42cb-a70d-445a9ff13ddc")]
+[assembly: Guid("857073e1-7fb5-40f7-bd27-f6b4a0b8fc2e")]
 
 // Version information for an assembly consists of the following four values:
 //

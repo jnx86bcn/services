@@ -30,4 +30,3 @@ C:\workspaces\services\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\workspaces\services\Models\obj\Debug\Models.csproj.CopyComplete
 C:\workspaces\services\Models\obj\Debug\Models.dll
 C:\workspaces\services\Models\obj\Debug\Models.pdb
-C:\workspaces\services\Models\obj\Debug\Models.csprojAssemblyReference.cache

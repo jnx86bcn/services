@@ -48,10 +48,21 @@ namespace zoo
 
         }
 
-        public void AddItem(string json)
+        public void AddItem(string Name, string Kingdom, string Class, string ConservationStatus, string Region, string Extinct, string Birth, string Death)
         {
 
-            Animal animal = JsonConvert.DeserializeObject<Animal>(json);
+            Animal animal = new Animal
+            {
+                Name = Name != ""? Name:"",
+                Kingdom = Kingdom != "" ? Kingdom : "",
+                Class = Class != "" ? Class : "",
+                ConservationStatus = ConservationStatus != "" ? ConservationStatus : "",
+                Region = Region != "" ? Region : "",
+                Extinct = Convert.ToBoolean(Extinct),
+                Birth = Birth != "" ? Convert.ToDateTime(Birth) : new DateTime(),
+                Death = Death != "" ? Convert.ToDateTime(Death) : new DateTime()
+            };
+
 
             //Create client connection to our MongoDB database
             var client = new MongoClient(_connectionString);

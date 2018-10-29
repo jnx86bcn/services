@@ -1,0 +1,17 @@
+C:\workspaces\services\01_ConsoleApp\obj\Debug\01_ConsoleApp.csproj.CoreCompileInputs.cache
+C:\workspaces\services\01_ConsoleApp\bin\Debug\01_ConsoleApp.exe.config
+C:\workspaces\services\01_ConsoleApp\bin\Debug\01_ConsoleApp.exe
+C:\workspaces\services\01_ConsoleApp\bin\Debug\01_ConsoleApp.pdb
+C:\workspaces\services\01_ConsoleApp\bin\Debug\DnsClient.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Bson.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Driver.Core.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Driver.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\System.Buffers.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\workspaces\services\01_ConsoleApp\bin\Debug\DnsClient.xml
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Bson.xml
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Driver.xml
+C:\workspaces\services\01_ConsoleApp\bin\Debug\MongoDB.Driver.Core.xml
+C:\workspaces\services\01_ConsoleApp\obj\Debug\01_ConsoleApp.csproj.CopyComplete
+C:\workspaces\services\01_ConsoleApp\obj\Debug\01_ConsoleApp.exe
+C:\workspaces\services\01_ConsoleApp\obj\Debug\01_ConsoleApp.pdb

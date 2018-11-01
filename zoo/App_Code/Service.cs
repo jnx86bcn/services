@@ -70,9 +70,6 @@ namespace zoo
                 //Insert the sample data 
                 animals.InsertOneAsync(animal);
 
-                //var filter = new FilterDefinitionBuilder<Animal>().Empty;
-                //var results = animals.Find<Animal>(filter).ToListAsync();
-
                 //Made it here without error? Let's commit the transaction
                 session.CommitTransaction();
             }

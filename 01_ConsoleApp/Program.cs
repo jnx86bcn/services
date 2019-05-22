@@ -22,7 +22,8 @@ namespace MongoDBTransaction
         }
 
 
-        const string MongoDBConnectionString = "mongodb+srv://admin:1234@node-rest-shop-5mgk3.mongodb.net/test?retryWrites=true";
+        const string MongoDBConnectionString = "mongodb+srv://admin:1234@cluster0-5mgk3.azure.mongodb.net/test? retryWrites=true";
+        
 
         static void Main(string[] args)
         {

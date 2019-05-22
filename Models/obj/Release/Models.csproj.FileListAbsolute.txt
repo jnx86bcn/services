@@ -1,0 +1,17 @@
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\Models.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\Models.pdb
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\DnsClient.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Bson.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Driver.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\System.Buffers.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\DnsClient.xml
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Bson.xml
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Driver.xml
+C:\Users\JNX\Documents\Programacion\Services\Models\bin\Release\MongoDB.Driver.Core.xml
+C:\Users\JNX\Documents\Programacion\Services\Models\obj\Release\Models.csprojAssemblyReference.cache
+C:\Users\JNX\Documents\Programacion\Services\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
+C:\Users\JNX\Documents\Programacion\Services\Models\obj\Release\Models.csproj.CopyComplete
+C:\Users\JNX\Documents\Programacion\Services\Models\obj\Release\Models.dll
+C:\Users\JNX\Documents\Programacion\Services\Models\obj\Release\Models.pdb

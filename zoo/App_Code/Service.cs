@@ -92,13 +92,13 @@ namespace zoo
                 List<FileInfo> files = new List<FileInfo>();
                 IEnumerable<FileInfo> fileExt = d.GetFiles("*.pdf");
                 files.AddRange(fileExt);
-                fileExt = d.GetFiles("*.docx");
+                fileExt = d.GetFiles("*.docx", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
-                fileExt = d.GetFiles("*.xlsx");
+                fileExt = d.GetFiles("*.xlsx", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
-                fileExt = d.GetFiles("*.pptx");
+                fileExt = d.GetFiles("*.pptx", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
-                fileExt = d.GetFiles("*.txt");
+                fileExt = d.GetFiles("*.txt", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
                 return files;
             }

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using MongoDB.Driver;
 using Models;
 using Newtonsoft.Json;
+using System.IO;
+using System.Web;
 
 namespace zoo
 {
@@ -81,5 +83,29 @@ namespace zoo
 
         }
 
+        public List<FileInfo> GetAllFiles()
+        {
+            try
+            {
+                string path = HttpRuntime.AppDomainAppPath + "\\documents";
+                DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
+                List<FileInfo> files = new List<FileInfo>();
+                IEnumerable<FileInfo> fileExt = d.GetFiles("*.pdf");
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.docx");
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.xlsx");
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.pptx");
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.txt");
+                files.AddRange(fileExt);
+                return files;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

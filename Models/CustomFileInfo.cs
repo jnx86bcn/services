@@ -7,5 +7,6 @@ namespace Models
         public string FileName { get; set; }
         public string Extension { get; set; }
         public string PathUrl { get; set; }
+        public string LinkFile { get; set; }
     }
 }

@@ -110,7 +110,8 @@ namespace zoo
 
                     CustomFile.FileName = file.Name;
                     CustomFile.Extension = file.Extension;
-                    CustomFile.PathUrl = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\"+file.Name;
+                    CustomFile.PathUrl = "documents" + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
+                    CustomFile.LinkFile = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
 
                     Customfiles.Add(CustomFile);
                 }

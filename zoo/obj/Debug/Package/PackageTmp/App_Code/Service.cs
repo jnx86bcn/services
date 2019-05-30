@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using MongoDB.Driver;
 using Models;
 using Newtonsoft.Json;
+using System.IO;
+using System.Web;
 
 namespace zoo
 {
@@ -81,5 +83,44 @@ namespace zoo
 
         }
 
+        public List<CustomFileInfo> GetAllFiles()
+        {
+            try
+            {
+                string path = HttpRuntime.AppDomainAppPath + "documents";
+                string urlPath = HttpContext.Current.Request.Url.Scheme +":\\"+ HttpContext.Current.Request.Url.Host+"\\documents";
+                DirectoryInfo d = new DirectoryInfo(path);
+                List<CustomFileInfo> Customfiles = new List<CustomFileInfo>();
+                List<FileInfo> files = new List<FileInfo>();
+                IEnumerable<FileInfo> fileExt;
+                fileExt = d.GetFiles("*.pdf", SearchOption.AllDirectories);
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.docx", SearchOption.AllDirectories);
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.xlsx", SearchOption.AllDirectories);
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.pptx", SearchOption.AllDirectories);
+                files.AddRange(fileExt);
+                fileExt = d.GetFiles("*.txt", SearchOption.AllDirectories);
+                files.AddRange(fileExt);
+
+                foreach(FileInfo file in files)
+                {
+                    CustomFileInfo CustomFile = new CustomFileInfo();
+
+                    CustomFile.FileName = file.Name;
+                    CustomFile.Extension = file.Extension;
+                    CustomFile.PathUrl = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\"+file.Name;
+
+                    Customfiles.Add(CustomFile);
+                }
+
+                return Customfiles;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

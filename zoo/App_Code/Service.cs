@@ -83,14 +83,17 @@ namespace zoo
 
         }
 
-        public List<FileInfo> GetAllFiles()
+        public List<CustomFileInfo> GetAllFiles()
         {
             try
             {
-                string path = HttpRuntime.AppDomainAppPath + "\\documents";
-                DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
+                string path = HttpRuntime.AppDomainAppPath + "documents";
+                string urlPath = HttpContext.Current.Request.Url.Scheme +":\\"+ HttpContext.Current.Request.Url.Host+"\\documents";
+                DirectoryInfo d = new DirectoryInfo(path);
+                List<CustomFileInfo> Customfiles = new List<CustomFileInfo>();
                 List<FileInfo> files = new List<FileInfo>();
-                IEnumerable<FileInfo> fileExt = d.GetFiles("*.pdf");
+                IEnumerable<FileInfo> fileExt;
+                fileExt = d.GetFiles("*.pdf", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
                 fileExt = d.GetFiles("*.docx", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
@@ -100,7 +103,19 @@ namespace zoo
                 files.AddRange(fileExt);
                 fileExt = d.GetFiles("*.txt", SearchOption.AllDirectories);
                 files.AddRange(fileExt);
-                return files;
+
+                foreach(FileInfo file in files)
+                {
+                    CustomFileInfo CustomFile = new CustomFileInfo();
+
+                    CustomFile.FileName = file.Name;
+                    CustomFile.Extension = file.Extension;
+                    CustomFile.PathUrl = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\"+file.Name;
+
+                    Customfiles.Add(CustomFile);
+                }
+
+                return Customfiles;
             }
             catch (Exception)
             {

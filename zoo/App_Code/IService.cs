@@ -18,7 +18,7 @@ namespace zoo
         void AddItem(string json);
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        List<FileInfo> GetAllFiles();
+        [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        List<CustomFileInfo> GetAllFiles();
     }
 }

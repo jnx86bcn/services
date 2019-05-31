@@ -43,7 +43,6 @@ C:\Users\JNX\Documents\Programacion\Services\Models\bin\Debug\DnsClient.xml
 C:\Users\JNX\Documents\Programacion\Services\Models\bin\Debug\MongoDB.Bson.xml
 C:\Users\JNX\Documents\Programacion\Services\Models\bin\Debug\MongoDB.Driver.xml
 C:\Users\JNX\Documents\Programacion\Services\Models\bin\Debug\MongoDB.Driver.Core.xml
-C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.dll

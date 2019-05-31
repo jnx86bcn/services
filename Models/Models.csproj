@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
-    <Compile Include="CustomFileInfo.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,7 +2,6 @@
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using Models;
-using System.IO;
 
 namespace zoo
 {
@@ -19,6 +18,6 @@ namespace zoo
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
-        List<CustomFileInfo> GetAllFiles();
+        List<Node> GetAllFiles();
     }
 }

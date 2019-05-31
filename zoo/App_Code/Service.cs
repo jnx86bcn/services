@@ -83,14 +83,14 @@ namespace zoo
 
         }
 
-        public List<CustomFileInfo> GetAllFiles()
+        public List<Node> GetAllFiles()
         {
             try
             {
                 string path = HttpRuntime.AppDomainAppPath + "documents";
                 string urlPath = HttpContext.Current.Request.Url.Scheme +":\\"+ HttpContext.Current.Request.Url.Host+"\\documents";
                 DirectoryInfo d = new DirectoryInfo(path);
-                List<CustomFileInfo> Customfiles = new List<CustomFileInfo>();
+                List<Node> nodes = new List<Node>();
                 List<FileInfo> files = new List<FileInfo>();
                 IEnumerable<FileInfo> fileExt;
                 fileExt = d.GetFiles("*.pdf", SearchOption.AllDirectories);
@@ -106,17 +106,46 @@ namespace zoo
 
                 foreach(FileInfo file in files)
                 {
-                    CustomFileInfo CustomFile = new CustomFileInfo();
 
-                    CustomFile.FileName = file.Name;
-                    CustomFile.Extension = file.Extension;
-                    CustomFile.PathUrl = "\\documents" + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
-                    CustomFile.LinkFile = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
+                    string[] nodesName  = ("documents" + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name).Split('\\');
 
-                    Customfiles.Add(CustomFile);
+                    //if (nodes.Count == 0)
+                    //{
+                    //    //root
+                    //    Node node = new Node();
+                    //    node.NodeName = nodesName[0];
+                    //    node.isDocument = false;
+                    //    node.NodeParent = "";
+                    //    nodes.Add(node);
+                    //}
+                    
+                    for (int i=1; i< nodesName.Length; i++)
+                    {
+                        if(nodes.FindIndex(r => r.NodeName.Equals(nodesName[i])) == -1 || nodes[nodes.FindIndex(r => r.NodeName.Equals(nodesName[i]))].isDocument == true)//new element
+                        {
+                            Node node = new Node();
+                            node.NodeName = nodesName[i];
+                            for(int j = 0; j<i; j++)
+                            {
+                                string[] Slice = new List<string>(nodesName).GetRange(0,i).ToArray();
+                                node.NodeParent = "\\" + string.Join("\\", Slice);
+                            }
+                            if (file.Name == nodesName[i])
+                            {
+                                node.isDocument = true;
+                                node.LinkFile = urlPath + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
+                                node.PathUrl = file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name;
+                            }
+                            else
+                            {
+                                node.isDocument = false;
+                            }
+                            nodes.Add(node);
+                        }
+                    }
                 }
 
-                return Customfiles;
+                return nodes;
             }
             catch (Exception)
             {

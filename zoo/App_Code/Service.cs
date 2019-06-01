@@ -108,7 +108,16 @@ namespace zoo
                 {
 
                     string[] nodesName  = ("documents" + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name).Split('\\');
-                    
+
+                    if (nodes.Count == 0)
+                    {
+                        //root
+                        Node node = new Node();
+                        node.NodeName = nodesName[0];
+                        node.NodeParent = "";
+                        nodes.Add(node);
+                    }
+
                     for (int i=1; i< nodesName.Length; i++)
                     {
                         if(nodes.FindIndex(r => r.NodeName.Equals(nodesName[i])) == -1 || nodes[nodes.FindIndex(r => r.NodeName.Equals(nodesName[i]))].isDocument == true)//new element

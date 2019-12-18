@@ -17,7 +17,7 @@ namespace zoo
     {
         string _connectionString = ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString;
 
-        public List<Animal> GetAllItems()
+        public List<Animal> GetAllAnimals()
         {
 
             //Create client connection to our MongoDB database
@@ -50,10 +50,10 @@ namespace zoo
 
         }
 
-        public void AddItem(string json)
+        public void AddAnimal(string jsonAnimal)
         {
 
-            Animal animal = JsonConvert.DeserializeObject<Animal>(json);
+            Animal animal = JsonConvert.DeserializeObject<Animal>(jsonAnimal);
 
             //Create client connection to our MongoDB database
             var client = new MongoClient(_connectionString);
@@ -109,16 +109,15 @@ namespace zoo
 
                     string[] nodesName  = ("documents" + file.DirectoryName.Split(new[] { path }, StringSplitOptions.None)[1] + "\\" + file.Name).Split('\\');
 
-                    //if (nodes.Count == 0)
-                    //{
-                    //    //root
-                    //    Node node = new Node();
-                    //    node.NodeName = nodesName[0];
-                    //    node.isDocument = false;
-                    //    node.NodeParent = "";
-                    //    nodes.Add(node);
-                    //}
-                    
+                    if (nodes.Count == 0)
+                    {
+                        //root
+                        Node node = new Node();
+                        node.NodeName = nodesName[0];
+                        node.NodeParent = "";
+                        nodes.Add(node);
+                    }
+
                     for (int i=1; i< nodesName.Length; i++)
                     {
                         if(nodes.FindIndex(r => r.NodeName.Equals(nodesName[i])) == -1 || nodes[nodes.FindIndex(r => r.NodeName.Equals(nodesName[i]))].isDocument == true)//new element
@@ -151,6 +150,39 @@ namespace zoo
             {
                 return null;
             }
+        }
+
+        public List<House> GetAllHouses()
+        {
+
+            //Create client connection to our MongoDB database
+            var client = new MongoClient(_connectionString);
+
+            //Create a session object that is used when leveraging transactions
+            var session = client.StartSession();
+
+            //Create the collection object that represents the "products" collection
+            IMongoCollection<House> housesCollection = session.Client.GetDatabase("MongoDBStore").GetCollection<House>("houses");
+
+            //Begin transaction
+            session.StartTransaction();
+
+            try
+            {
+                var filter = new FilterDefinitionBuilder<House>().Empty;
+                List<House> results = housesCollection.Find<House>(filter).ToList();
+
+                //Made it here without error? Let's commit the transaction
+                session.CommitTransaction();
+
+                return results;
+            }
+            catch (Exception)
+            {
+                session.AbortTransaction();
+                return null;
+            }
+
         }
     }
 }

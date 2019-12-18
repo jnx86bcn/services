@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\01_ConsoleApp",
+    "\\zoo",
+    "\\zoo\\App_Code"
   ],
-  "SelectedNode": "\\Services.sln",
+  "SelectedNode": "\\01_ConsoleApp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

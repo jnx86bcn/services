@@ -123,14 +123,12 @@ C:\Users\JNX\Documents\Programacion\Services\zoo\bin\roslyn\VBCSCompiler.exe
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\DnsClient.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Models.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Bson.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Driver.Core.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Driver.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Newtonsoft.Json.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\System.Buffers.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Models.pdb
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\DnsClient.xml
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Bson.xml
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Driver.xml
@@ -138,7 +136,6 @@ C:\Users\JNX\Documents\Programacion\Services\zoo\bin\MongoDB.Driver.Core.xml
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Newtonsoft.Json.xml
 C:\Users\JNX\Documents\Programacion\Services\zoo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\JNX\Documents\Programacion\Services\zoo\obj\Debug\zoo.csprojAssemblyReference.cache
-C:\Users\JNX\Documents\Programacion\Services\zoo\obj\Debug\zoo.csproj.CoreCompileInputs.cache
 C:\Users\JNX\Documents\Programacion\Services\zoo\obj\Debug\zoo.csproj.CopyComplete
 C:\Users\JNX\Documents\Programacion\Services\zoo\obj\Debug\zoo.dll
 C:\Users\JNX\Documents\Programacion\Services\zoo\obj\Debug\zoo.pdb

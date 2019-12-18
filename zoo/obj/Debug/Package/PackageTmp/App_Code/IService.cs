@@ -21,7 +21,7 @@ namespace zoo
         List<House> GetAllHouses();
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<Node> GetAllFiles();
     }
 }

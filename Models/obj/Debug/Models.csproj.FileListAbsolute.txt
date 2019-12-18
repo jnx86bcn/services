@@ -47,3 +47,4 @@ C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.csproj.Core
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.dll
 C:\Users\JNX\Documents\Programacion\Services\Models\obj\Debug\Models.pdb
+C:\Workspace\jgasparino\services\Models\obj\Debug\Models.csprojAssemblyReference.cache

@@ -103,7 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\webserverapi - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\webserverapi - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\webserverapi - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\webserverapi - Web Deploy1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

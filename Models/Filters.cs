@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Runtime.Serialization;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 
 namespace Models
 {
-    public class FiltersValues
+    public class Filters
     {
         public int priceMin { get; set; }
         public int priceMax { get; set; }

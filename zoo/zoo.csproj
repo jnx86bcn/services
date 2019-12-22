@@ -112,6 +112,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{02641d21-3381-4226-995e-8c7b41b60fba}</Project>
       <Name>Models</Name>

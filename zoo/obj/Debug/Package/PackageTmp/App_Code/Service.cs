@@ -236,7 +236,7 @@ namespace zoo
 
             try
             {
-                FiltersValues filters = JsonConvert.DeserializeObject<FiltersValues>(jsonFilter);
+                Filters filters = JsonConvert.DeserializeObject<Filters>(jsonFilter);
 
                 var filter = new FilterDefinitionBuilder<House>().Empty;
                 List<House> results = housesCollection.Find<House>(filter).ToList();

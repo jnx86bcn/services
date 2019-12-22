@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\01_ConsoleApp",
-    "\\zoo",
     "\\zoo\\App_Code"
   ],
-  "SelectedNode": "\\01_ConsoleApp\\packages.config",
+  "SelectedNode": "\\Models",
   "PreviewInSolutionExplorer": false
 }

@@ -237,8 +237,27 @@ namespace zoo
             try
             {
                 Filters filters = JsonConvert.DeserializeObject<Filters>(jsonFilter);
+                FilterDefinitionBuilder<House> query = Builders<House>.Filter;
 
-                var filter = new FilterDefinitionBuilder<House>().Empty;
+                var filterCity = filters.city != "" ? query.Eq(field => field.City, filters.city) : new FilterDefinitionBuilder<House>().Empty;
+                var filterNumberRooms = filters.minRoom > 0 ? query.Gte(field => field.Rooms, filters.minRoom) : new FilterDefinitionBuilder<House>().Empty;
+                
+                var filterPrice = query.Gte(field => field.Price, filters.priceMin);
+
+                if (filters.priceMax != 0)
+                {
+                    filterPrice = filterPrice & query.Lte(field => field.Price, filters.priceMax);
+                }
+                
+                var filterSQM = query.Gte(field => field.SQM, filters.sizeMin);
+
+                if (filters.sizeMax != 0)
+                {
+                    filterSQM = filterSQM & query.Lte(field => field.Price, filters.priceMax);
+                }
+
+                var filter = Builders<House>.Filter.And(filterCity, filterNumberRooms, filterPrice, filterSQM);
+                
                 List<House> results = housesCollection.Find<House>(filter).ToList();
 
                 //Made it here without error? Let's commit the transaction

@@ -21,6 +21,14 @@ namespace zoo
         List<House> GetAllHouses();
 
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/GetHousesByCity", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        List<House> GetHousesByCity(string city);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/GetFilterHouses", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        List<House> GetFilterHouses(string jsonFilter);
+
+        [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/GetAllFiles", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<Node> GetAllFiles();
     }

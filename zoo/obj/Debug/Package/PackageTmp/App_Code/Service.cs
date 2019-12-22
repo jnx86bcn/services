@@ -184,5 +184,74 @@ namespace zoo
             }
 
         }
+
+        public List<House> GetHousesByCity(string city="")
+        {
+
+            //Create client connection to our MongoDB database
+            var client = new MongoClient(_connectionString);
+
+            //Create a session object that is used when leveraging transactions
+            var session = client.StartSession();
+
+            //Create the collection object that represents the "products" collection
+            IMongoCollection<House> housesCollection = session.Client.GetDatabase("MongoDBStore").GetCollection<House>("houses");
+
+            //Begin transaction
+            session.StartTransaction();
+
+            try
+            {
+                var filter = city != "" ? Builders<House>.Filter.Eq(field => field.City, city) : new FilterDefinitionBuilder<House>().Empty;
+
+                List<House> results = housesCollection.Find<House>(filter).ToList();
+
+                //Made it here without error? Let's commit the transaction
+                session.CommitTransaction();
+
+                return results;
+            }
+            catch (Exception)
+            {
+                session.AbortTransaction();
+                return null;
+            }
+
+        }
+
+        public List<House> GetFilterHouses(string jsonFilter="")
+        {
+
+            //Create client connection to our MongoDB database
+            var client = new MongoClient(_connectionString);
+
+            //Create a session object that is used when leveraging transactions
+            var session = client.StartSession();
+
+            //Create the collection object that represents the "products" collection
+            IMongoCollection<House> housesCollection = session.Client.GetDatabase("MongoDBStore").GetCollection<House>("houses");
+
+            //Begin transaction
+            session.StartTransaction();
+
+            try
+            {
+                FiltersValues filters = JsonConvert.DeserializeObject<FiltersValues>(jsonFilter);
+
+                var filter = new FilterDefinitionBuilder<House>().Empty;
+                List<House> results = housesCollection.Find<House>(filter).ToList();
+
+                //Made it here without error? Let's commit the transaction
+                session.CommitTransaction();
+
+                return results;
+            }
+            catch (Exception)
+            {
+                session.AbortTransaction();
+                return null;
+            }
+
+        }
     }
 }
